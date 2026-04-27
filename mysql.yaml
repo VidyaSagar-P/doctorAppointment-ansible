@@ -5,6 +5,10 @@
     mysql_root_password: Doctor@1
     login_host: mysql.bavs.space
   tasks:
+  - name: install python dependencies
+    ansible.builtin.pip:
+      name: PyMySQL
+    executable: pip3
   - name: install mysql
     ansible.builtin.package:
        name: mysql-server
