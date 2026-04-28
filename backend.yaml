@@ -33,7 +33,7 @@
       state: directory
 
   - name: Download backend code
-    ansible,builtin.get_url:
+    ansible.builtin.get_url:
       url: https://jyo1994-vs-workspace.s3.us-east-1.amazonaws.com/DoctorAppointment-BE-v1.zip
       dest: /tmp/doctorapp.zip
 
