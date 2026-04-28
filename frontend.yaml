@@ -23,12 +23,12 @@
       path: /usr/share/nginx/html
       state: directory
 
-  - name: Download backend code
+  - name: Download frontend code
     ansible.builtin.get_url:
       url: https://jyo1994-vs-workspace.s3.us-east-1.amazonaws.com/doctorAppointment-index.zip
       dest: /tmp/doctor-appointment.zip
 
-  - name: extract backend code
+  - name: extract frontend code
     ansible.builtin.unarchive:
       src: /tmp/doctor-appointment.zip
       dest: /usr/share/nginx/html

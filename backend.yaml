@@ -35,7 +35,7 @@
 
   - name: Download backend code
     ansible.builtin.get_url:
-      url: https://jyo1994-vs-workspace.s3.us-east-1.amazonaws.com/DoctorAppointment-BE-v1.zip
+      url: https://jyo1994-vs-workspace.s3.us-east-1.amazonaws.com/mvn.zip.zip
       dest: /tmp/doctorapp.zip
 
   - name: extract backend code
@@ -49,6 +49,7 @@
       src: /app/target/HospitalAppointment-0.0.1-SNAPSHOT.jar
       dest: /app/doctorapp.jar
       remote_src: yes
+      
   - name: Copy the service file
     ansible.builtin.copy:
       src: doctor.service
