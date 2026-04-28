@@ -47,7 +47,7 @@
     ansible.builtin.copy:
       src: /app/target/HospitalAppointment-0.0.1-SNAPSHOT.jar
       dest: /app/doctorapp.jar
-
+      remote_src: yes
   - name: Copy the service file
     ansible.builtin.copy:
       src: doctor.service
